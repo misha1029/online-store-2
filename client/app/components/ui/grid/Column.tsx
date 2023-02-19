@@ -1,10 +1,32 @@
+import cn from 'clsx'
 import { FC, PropsWithChildren } from 'react'
 
-const Column: FC<PropsWithChildren<{ size: number }>> = ({
+interface IColumn {
+	size: number
+	isCenter?: boolean
+	className?: string
+}
+
+const Column: FC<PropsWithChildren<IColumn>> = ({
 	size,
-	children
+	children,
+	isCenter = true,
+	className
 }) => {
-	return <div className={`col-span-${size}`}>{children}</div>
+	return (
+		<div
+			style={{
+				gridColumn: `span ${size} / span ${size}`
+			}}
+			className={cn(
+				'border-r-2 border-black border-solid h-full flex items-center px-3',
+				{ 'justify-center': isCenter },
+				className
+			)}
+		>
+			{children}
+		</div>
+	)
 }
 
 export default Column
