@@ -18,9 +18,7 @@ const HotSale: FC = () => {
 						{formatToCurrency(295)}
 					</span>
 				</div>
-				<button className='text-sm uppercase text-white border-b border-[rgba(255,255,255,.2)]'>
-					Buy now
-				</button>
+				<button className='btn-style'>Buy now</button>
 			</div>
 		</div>
 	)

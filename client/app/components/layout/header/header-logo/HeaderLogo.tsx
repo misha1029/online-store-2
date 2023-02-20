@@ -6,7 +6,7 @@ import Column from '@/ui/grid/Column'
 
 const HeaderLogo: FC = () => {
 	return (
-		<Column size={2}>
+		<Column size={3}>
 			<Link href='/' className='flex items-center -pl-4'>
 				<Image
 					src='/images/logo.svg'
