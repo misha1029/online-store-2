@@ -5,13 +5,17 @@ interface IColumn {
 	size: number
 	isCenter?: boolean
 	className?: string
+	isPading?: boolean
+	isBorder?: boolean
 }
 
 const Column: FC<PropsWithChildren<IColumn>> = ({
 	size,
 	children,
 	isCenter = true,
-	className
+	className,
+	isPading = true,
+	isBorder = true
 }) => {
 	return (
 		<div
@@ -19,8 +23,12 @@ const Column: FC<PropsWithChildren<IColumn>> = ({
 				gridColumn: `span ${size} / span ${size}`
 			}}
 			className={cn(
-				'border-r-2 border-black border-solid h-full flex items-center px-3',
-				{ 'justify-center': isCenter },
+				'h-full flex ',
+				{
+					'justify-center items-center': isCenter,
+					'px-3': isPading,
+					'border-r-2 border-black border-solid': isBorder
+				},
 				className
 			)}
 		>

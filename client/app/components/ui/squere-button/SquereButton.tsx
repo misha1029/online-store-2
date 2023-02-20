@@ -3,7 +3,7 @@ import { IconType } from 'react-icons'
 
 interface ISquereButton {
 	Icon: IconType
-	onClick: () => void
+	onClick?: () => void
 	number?: number
 }
 
