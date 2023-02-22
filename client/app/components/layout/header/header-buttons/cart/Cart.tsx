@@ -34,7 +34,7 @@ const Cart: FC = () => {
 			<SquereButton
 				Icon={FiShoppingCart}
 				onClick={() => setIsShow(!isShow)}
-				number={3}
+				number={cart.length}
 			/>
 			<div
 				className={cn(
