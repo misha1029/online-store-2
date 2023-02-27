@@ -2,9 +2,10 @@ import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
 import { ServeStaticModule } from '@nestjs/serve-static'
 import { path } from 'app-root-path'
+import { PaymentModule } from './payment/payment.module'
 import { ProductModule } from './product/product.module'
 import { ReviewModule } from './review/review.module'
-import { PaymentModule } from './payment/payment.module';
+import { AuthModule } from './user/auth.module'
 
 @Module({
 	imports: [
@@ -15,7 +16,8 @@ import { PaymentModule } from './payment/payment.module';
 		ConfigModule.forRoot(),
 		ProductModule,
 		ReviewModule,
-		PaymentModule
+		PaymentModule,
+		AuthModule
 	]
 })
 export class AppModule {}

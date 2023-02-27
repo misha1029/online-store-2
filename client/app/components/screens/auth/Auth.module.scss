@@ -1,0 +1,21 @@
+.container {
+	@apply flex flex-col items-center justify-center p-8;
+	.title {
+		@apply mb-3 text-2xl;
+	}
+	.input {
+		@apply w-80 p-3;
+		> input {
+			@apply border-b border-[rgba(255,255,255,.2)] bg-transparent p-2 text-sm outline-none;
+			width: 100%;
+		}
+		> input:last-child {
+			@apply pt-0;
+		}
+	}
+	.btn {
+		@apply mt-6;
+	}
+}
+
+/* 						className=' block transition-colors text-center text-sm border-b border-[rgba(255,255,255,.2)] outline-none  mb-2' */
